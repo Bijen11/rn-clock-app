@@ -115,7 +115,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: '900',
+    fontFamily: 'Bungee-Regular',
   },
 });
 
