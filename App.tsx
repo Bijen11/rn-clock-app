@@ -17,6 +17,8 @@ import {
   View,
 } from 'react-native';
 
+import MCIcon from 'react-native-vector-icons/AntDesign';
+
 import {
   Colors,
   DebugInstructions,
@@ -89,6 +91,8 @@ function App(): JSX.Element {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
+          <MCIcon name="close" size={27} color={'black'} />
+
           <LearnMoreLinks />
         </View>
       </ScrollView>
@@ -111,7 +115,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: '900',
+    fontFamily: 'Bungee-Regular',
   },
 });
 

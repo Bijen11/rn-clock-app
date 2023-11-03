@@ -148,6 +148,15 @@ android {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.2'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}
+
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
@@ -166,5 +175,30 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+project.ext.vectoricons = [
+        iconFontNames: [ 'MaterialIcons.ttf',
+                         'EvilIcons.ttf',
+                         'AntDesign.ttf',
+                         'Entypo.ttf' ,
+                         'Feather.ttf',
+                         'FontAwesome.ttf',
+                         'FontAwesome5_Brands.ttf',
+                         'FontAwesome5_Regular.ttf',
+                         'FontAwesome5_Solid.ttf',
+                         'Fontisto.ttf',
+                         'Foundation.ttf',
+                         'Ionicons.ttf',
+                         'MaterialCommunityIcons.ttf',
+                         'Octicons.ttf',
+                         'SimpleLineIcons.ttf',
+                         'Zocial.ttf',
+                         'OpenSans-Bold.ttf',
+                         'OpenSans-ExtraBold.ttf',
+                         'OpenSans-Light.ttf',
+                         'OpenSans-Regular.ttf',
+                         'OpenSans-SemiBold.ttf',
+]]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
